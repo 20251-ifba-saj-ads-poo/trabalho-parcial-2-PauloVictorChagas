@@ -1,7 +1,3 @@
-/**
- * Sample Skeleton for 'Login.fxml' Controller Class
- */
-
 package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.App;
