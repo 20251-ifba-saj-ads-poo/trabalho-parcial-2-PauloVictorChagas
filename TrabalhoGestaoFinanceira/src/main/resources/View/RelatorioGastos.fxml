@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RelatorioGastosController">
+    <children>
+        <HBox alignment="BOTTOM_LEFT" prefHeight="36.0" prefWidth="1200.0">
+            <children>
+                <Label text="GESTÃO FINANCEIRA">
+                    <font>
+                        <Font name="System Italic" size="24.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </HBox.margin>
+                </Label>
+                <Pane prefHeight="36.0" prefWidth="161.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Button fx:id="ButtonCadGasto" layoutX="819.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonCadGasto">
+                            <graphic>
+                                <FontIcon iconLiteral="mdi2r-receipt-text-edit-outline" iconSize="20" />
+                            </graphic>
+                        </Button>
+                        <Button fx:id="ButtonGrafico" layoutX="855.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleButtonGrafico">
+                            <graphic>
+                                <FontIcon iconLiteral="mdi2a-align-vertical-bottom" iconSize="20" />
+                            </graphic>
+                        </Button>
+                        <Button fx:id="ButtonBackLlogin" layoutX="891.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleButtonBackLogin">
+                            <graphic>
+                                <FontIcon iconLiteral="mdi2e-exit-to-app" iconSize="20" />
+                            </graphic>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+
+        <PieChart fx:id="Diagrama" layoutX="413.0" layoutY="36.0" prefHeight="241.0" prefWidth="359.0" style="-fx-background-color: #A6A6A6;" />
+
+        <TableView fx:id="tabelaView" layoutX="186.0" layoutY="292.0" prefHeight="409.0" prefWidth="828.0">
+            <columns>
+                <TableColumn fx:id="tabelaTipo" prefWidth="117.0" text="Tipo" />
+                <TableColumn fx:id="tabelaValor" prefWidth="96.0" text="Valor" />
+                <TableColumn fx:id="tabelaData" prefWidth="117.0" text="Data" />
+                <TableColumn fx:id="tabelaDespesaGanho" prefWidth="502.0" text="Despesa/Ganho" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadGastosController">
+   <children>
+      <Label layoutX="200.0" layoutY="20.0" text="Cadastro de Gastos/Receitas">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+
+      <GridPane hgap="15" layoutX="100.0" layoutY="80.0" vgap="15">
+         <columnConstraints>
+            <!-- Coluna Label -->
+            <ColumnConstraints minWidth="100.0" />
+            <!-- Coluna Campo -->
+            <ColumnConstraints minWidth="200.0" />
+         </columnConstraints>
+
+         <children>
+            <Label text="Descrição:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="cadDespesaGanho" promptText="Ex: Conta de Luz" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Valor (R$):" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="cadValor" promptText="Ex: 150.00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Tipo:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="choiceBoxTipo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Data:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <DatePicker fx:id="cadData" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+
+      <Button fx:id="buttonCadastrar" layoutX="170.0" layoutY="320.0" prefWidth="120.0" text="Cadastrar">
+         <graphic>
+            <FontIcon iconLiteral="mdi2c-content-save" iconSize="18" />
+         </graphic>
+      </Button>
+
+      <Button fx:id="cadBack2" layoutX="310.0" layoutY="320.0" prefWidth="120.0" text="Voltar">
+         <graphic>
+            <FontIcon iconLiteral="mdi2a-arrow-left" iconSize="18" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

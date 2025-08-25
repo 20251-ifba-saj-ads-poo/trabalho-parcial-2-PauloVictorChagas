@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #A6A6A6;"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.LoginController">
+
+   <children>
+      <Label alignment="CENTER" layoutX="251.0" layoutY="25.0" prefHeight="58.0"
+             prefWidth="105.0" text="Login" textAlignment="CENTER" textFill="#40403f"
+             AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="160.0" layoutY="131.0" text="Email" textFill="#40403f">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontIcon iconLiteral="mdi2a-account" iconSize="30" wrappingWidth="30.0"/>
+         </graphic>
+      </Label>
+
+      <TextField fx:id="textFieldEmail" alignment="CENTER" layoutX="160.0" layoutY="163.0"
+                 prefHeight="26.0" prefWidth="280.0" promptText="EMAIL">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+
+      <Label layoutX="160.0" layoutY="207.0" text="Senha" textFill="#40403f">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontIcon iconLiteral="mdi2a-account-key" iconSize="30"/>
+         </graphic>
+      </Label>
+
+      <PasswordField fx:id="textFieldPassword" alignment="CENTER" layoutX="160.0" layoutY="237.0"
+                     prefHeight="26.0" prefWidth="280.0" promptText="SENHA">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+
+      <Button layoutX="211.0" layoutY="295.0" mnemonicParsing="false" onAction="#handlerLoginButton"
+              prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: #262626;"
+              text="ENTRAR" textFill="#40403f">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+
+      <Label layoutX="216.0" layoutY="468.0" onMouseClicked="#handleCadastro"
+             text="Não possui conta? Clique aqui!">
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Label>
+
+      <TextFlow fx:id="loginMsgBox" layoutX="169.0" layoutY="354.0" prefHeight="58.0" prefWidth="280.0"
+                style="-fx-background-color: #262626; -fx-padding: 15px;" visible="false">
+         <children>
+            <Text fx:id="loginMsg" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="ATENÇÃO!!! Email ou Senha está incorreto!">
+               <font>
+                  <Font name="System Bold Italic" size="16.0"/>
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #A6A6A6;"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.CadUsuarioController">
+
+   <children>
+      <Label alignment="CENTER" layoutX="211.0" layoutY="34.0" prefHeight="58.0" prefWidth="216.0"
+             text="Cadastro" textAlignment="CENTER" textFill="#40403f">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="170.0" layoutY="141.0" text="Email" textFill="#40403f">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontIcon iconLiteral="mdi2a-account" iconSize="30" wrappingWidth="30.0"/>
+         </graphic>
+      </Label>
+
+      <TextField fx:id="textCadastroEmail" alignment="CENTER" layoutX="170.0" layoutY="173.0"
+                 prefHeight="39.0" prefWidth="280.0" promptText="EMAIL">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </TextField>
+
+      <Label layoutX="170.0" layoutY="220.0" text="Nome" textFill="#40403f">
+         <font>
+            <Font size="18.0"/>
+         </font>
+         <graphic>
+            <FontIcon iconLiteral="mdi2a-account" iconSize="30" wrappingWidth="30.0"/>
+         </graphic>
+      </Label>
+
+      <TextField fx:id="textCadastroNome" alignment="CENTER" layoutX="170.0" layoutY="257.0"
+                 prefHeight="39.0" prefWidth="280.0" promptText="NOME">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </TextField>
+
+      <Label layoutX="167.0" layoutY="303.0" text="Senha" textFill="#40403f">
+         <font>
+            <Font size="18.0"/>
+         </font>
+         <graphic>
+            <FontIcon iconLiteral="mdi2a-account-key" iconSize="30"/>
+         </graphic>
+      </Label>
+
+      <PasswordField fx:id="textCadastroSenha" alignment="CENTER" layoutX="170.0" layoutY="333.0"
+                     prefHeight="26.0" prefWidth="280.0" promptText="SENHA">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </PasswordField>
+
+      <Button layoutX="211.0" layoutY="407.0" mnemonicParsing="false"
+              onAction="#handlerCadastroButton"
+              prefHeight="40.0" prefWidth="179.0"
+              style="-fx-background-color: #262626;" text="CADASTRAR" textFill="#ebebeb">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Button>
+
+      <TextFlow fx:id="cadMsgBox" layoutX="179.0" layoutY="364.0" prefHeight="58.0" prefWidth="280.0"
+                style="-fx-background-color: #262626; -fx-padding: 15px;" visible="false">
+         <children>
+            <Text fx:id="cadMsg" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="Mensagem de status">
+               <font>
+                  <Font name="System Bold Italic" size="16.0"/>
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+
+      <Button layoutX="568.0" mnemonicParsing="false" onAction="#handleBackToLogin">
+         <graphic>
+            <FontIcon fx:id="cadBack" iconLiteral="mdi2k-keyboard-backspace" iconSize="20"/>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
